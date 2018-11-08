@@ -1,5 +1,14 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
 def roadsAndLibraries(n, c_lib, c_road, cities):
-    if c_lib < c_road or cities == [[]]:
+    print(cities)
+    if c_lib < c_road or cities == []:
         return n * c_lib
 
     # generate graph
@@ -41,31 +50,26 @@ def dfs(graph, node, visited, result):
             result = dfs(graph, adj, visited, result+1)
     return result
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    cities = [[8, 2],
-              [2, 9]]
+    q = int(input())
 
-    print(roadsAndLibraries(9, 91, 84, cities))
+    for q_itr in range(q):
+        nmC_libC_road = input().split()
 
-    cities = [[2, 1],
-              [5, 3],
-              [5, 1],
-              [3, 4],
-              [3, 1],
-              [5, 4],
-              [4, 1],
-              [5, 2],
-              [4, 2]]
+        n = int(nmC_libC_road[0])
 
-    print(roadsAndLibraries(5, 92, 23, cities))
+        m = int(nmC_libC_road[1])
 
-    cities = [[6, 4],
-              [3, 2],
-              [7, 1]]
+        c_lib = int(nmC_libC_road[2])
 
-    print(roadsAndLibraries(8, 10, 55, cities))
+        c_road = int(nmC_libC_road[3])
 
-    print(roadsAndLibraries(1, 5, 3, [[]]))
+        cities = []
 
-    print(roadsAndLibraries(2, 102, 1, [[]]))
+        for _ in range(m):
+            cities.append(list(map(int, input().rstrip().split())))
+
+        result = roadsAndLibraries(n, c_lib, c_road, cities)
+
+        print(str(result) + '\n')
