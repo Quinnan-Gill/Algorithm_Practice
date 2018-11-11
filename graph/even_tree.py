@@ -12,24 +12,16 @@ import sys
     That's your answer...
 '''
 
-if __name__ == '__main__':
-    tree_nodes, tree_edges = map(int, input().split())
-
-    tree_from = [0] * tree_edges
-    tree_to = [0] * tree_edges
-
-    for tree_itr in range(tree_edges):
-        tree_from[tree_itr], tree_to[tree_itr] = map(int, input().split())
-
-    tree_weight = {}
-    for tree_itr in range(tree_edges-1,-1,-1):
-        if tree_from[tree_itr] in tree_weight:
-            tree_weight[tree_from[tree_itr]] += 1
+# Complete the evenForest function below.
+def evenForest(t_nodes, t_edges, t_from, t_to):
+    tree_map = {}
+    for edge in range(t_edges-1, -1, -1):
+        if t_from[edge] in tree_map:
+            tree_map[t_from[edge]] += 1
         else:
-            tree_weight[tree_from[tree_itr]] = 1
-        if tree_to[tree_itr] in tree_weight:
-            tree_weight[tree_to[tree_itr]] += tree_weight[tree_from[tree_itr]]
+            tree_map[t_from[edge]] = 1
+        if t_to[edge] in tree_map:
+            tree_map[t_to[edge]] += tree_map[t_from[edge]]
         else:
-            tree_weight[tree_to[tree_itr]] = tree_weight[tree_from[tree_itr]]
-    # print(tree_weight)
-    print(len([1 for key in tree_weight if tree_weight[key] % 2 == 0]))
+            tree_map[t_to[edge]] = tree_map[t_from[edge]]
+    return len([1 for key in tree_map.keys() if tree_map[key]%2 == 0])
