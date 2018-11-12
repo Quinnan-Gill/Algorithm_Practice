@@ -12,7 +12,7 @@ def shortestReach(n, edges, s):
     result = []
     for i in range(1, n+1):
         if i != s:
-            result.append(djis(graph, s, i))
+            result.append(dijkstra(graph, s, i))
     return result
 
 
