@@ -1,0 +1,12 @@
+The backbone of this project is the DLB trie. So I started with that. I first
+laid out what operations I needed for the DLB. The big thing I need is the ability
+to put in keys and to retrieve keys. I plan to use a DLB trie for loading data from both dictionary.txt and user_history.txt. However with user_history.txt I need to associate values with each word used. The words with the higher frequencies get suggested first. When retrieving the keys, the solution screams that it needs to be placed in a 
+priority queue (more on that later). I also need the ability to store values
+in the DLB so it will have a key value system. I also need a method that takes
+either a full string or a prefix and returns the string itself and the key value
+pair (need a class of a node to do that). Then it places those nodes into a priority
+queue / max heap. The max heap will be organized by the integer value of the
+node (the value in the key value pair). The only operations I really care about for the 
+Max Priority Queue is insertion and deletion. For insertion it is an O(lgN) runtime 
+and I need to insert N keys into the the PQ thus resulting in an O(NlgN) operation. I
+also to delete the max key in order to get the next max. Deletion is an O(lgN) operation.

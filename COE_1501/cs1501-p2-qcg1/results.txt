@@ -1,0 +1,119 @@
+Lego-big.gif - 93371 bytes
+---------------------------------------------------
+  Compression Type |    Size      |     Ratio
+---------------------------------------------------
+  Normal LZW:      | 128973 bytes |  0.723957727586
+  Do Nothing Mode: | 122493 bytes |  0.762255802372
+  Reset Mode:      | 122493 bytes |  0.762255802372
+  Monitor Mode:    | 122493 bytes |  0.762255802372
+  GZIP:            | 92480 bytes  |  1.00963451557
+
+all.tar - 3031040 bytes
+---------------------------------------------------
+  Compression Type |    Size       |    Ratio
+---------------------------------------------------
+  Normal LZW:      | 1846854 bytes | 1.64119091168
+  Do Nothing Mode: | 1792781 bytes | 1.6906917242
+  Reset Mode:      | 1178211 bytes | 2.57257825636
+  Monitor Mode:    | 1820115 bytes | 1.66530136832
+  GZIP:            | 969077 bytes  | 3.12775971362
+
+assig2.doc - 87040 bytes
+-------------------------------------------------
+  Compression Type |    Size     |     Ratio
+-------------------------------------------------
+  Normal LZW:      | 74574 bytes |  1.16716281814
+  Do Nothing Mode: | 40039 bytes |  2.17388046655
+  Reset Mode:      | 40039 bytes |  2.17388046655
+  Monitor Mode:    | 40039 bytes |  2.17388046655
+  GZIP:            | 23201 bytes |  3.75156243265
+
+code.txt - 72351 bytes
+---------------------------------------------------
+  Compression Type |    Size     |     Ratio
+---------------------------------------------------
+  Normal LZW:      | 30980 bytes |  2.3354099419
+  Do Nothing Mode: | 24544 bytes |  2.94780801825
+  Reset Mode:      | 24544 bytes |  2.94780801825
+  Monitor Mode:    | 24544 bytes |  2.94780801825
+  GZIP:            | 15167 bytes |  4.77029076284
+
+code2.txt - 57701 bytes
+---------------------------------------------------
+  Compression Type |    Size     |    Ratio
+---------------------------------------------------
+  Normal LZW:      | 24138 bytes |  2.39046317011
+  Do Nothing Mode: | 20515 bytes |  2.8126249086
+  Reset Mode:      | 20515 bytes |  2.8126249086
+  Monitor Mode:    | 20515 bytes |  2.8126249086
+  GZIP:            | 13470 bytes |  4.28366740906
+
+edit.exe - 236328 bytes
+---------------------------------------------------
+  Compression Type |    Size      |    Ratio
+---------------------------------------------------
+  Normal LZW:      | 250742 bytes | 0.942514616618
+  Do Nothing Mode: | 156409 bytes | 1.51096164543
+  Reset Mode:      | 152229 bytes | 1.55245058432
+  Monitor Mode:    | 156409 bytes | 1.51096164543
+  GZIP:            | 126653 bytes | 1.86594869446
+
+frosty.jpg - 126748 bytes
+---------------------------------------------------
+  Compression Type |    Size      |    Ratio
+---------------------------------------------------
+  Normal LZW:      | 177453 bytes |  0.714262368064
+  Do Nothing Mode: | 163789 bytes |  0.773849281698
+  Reset Mode:      | 171168 bytes |  0.740488876426
+  Monitor Mode:    | 163789 bytes |  0.773849281698
+  GZIP:            | 126661 bytes |  1.00068687283
+
+gone_fishing.bmp - 17336 bytes
+-------------------------------------------------
+  Compression Type |    Size    |    Ratio
+-------------------------------------------------
+  Normal LZW:      | 9278 bytes |  1.86850614357
+  Do Nothing Mode: | 8963 bytes |  1.93417382573
+  Reset Mode:      | 8963 bytes |  1.93417382573
+  Monitor Mode:    | 8963 bytes |  1.93417382573
+  GZIP:            | 8654 bytes |  2.00323549804
+
+large.txt - 1220703 bytes
+---------------------------------------------------
+  Compression Type |    Size      |   Ratio
+---------------------------------------------------
+  Normal LZW:      | 605184 bytes | 2.01707745082
+  Do Nothing Mode: | 501777 bytes | 2.43275997106
+  Reset Mode:      | 527534 bytes | 2.31397976244
+  Monitor Mode:    | 501777 bytes | 2.43275997106
+  GZIP:            | 493028 bytes | 2.47593037312
+
+medium.txt - 25407 bytes
+---------------------------------------------------
+  Compression Type |    Size     |   Ratio
+---------------------------------------------------
+  Normal LZW:      | 13197 bytes |  1.92521027506
+  Do Nothing Mode: | 12530 bytes |  2.02769353551
+  Reset Mode:      | 12530 bytes |  2.02769353551
+  Monitor Mode:    | 12530 bytes |  2.02769353551
+  GZIP:            | 10806 bytes |  2.35119378123
+
+wacky.bmp - 921654 bytes
+---------------------------------------------------
+  Compression Type |    Size    |   Ratio
+---------------------------------------------------
+  Normal LZW:      | 4302 bytes | 214.238493724
+  Do Nothing Mode: | 3951 bytes | 233.271070615
+  Reset Mode:      | 3951 bytes | 233.271070615
+  Monitor Mode:    | 3951 bytes | 233.271070615
+  GZIP:            | 2949 bytes | 312.531027467
+
+winnt256.bmp - 157044 bytes
+---------------------------------------------------
+  Compression Type |    Size      |    Ratio
+---------------------------------------------------
+  Normal LZW:      | 159050 bytes |  0.987387613958
+  Do Nothing Mode: | 62931 bytes  |  2.49549506602
+  Reset Mode:      | 62931 bytes  |  2.49549506602
+  Monitor Mode:    | 62931 bytes  |  2.49549506602
+  GZIP:            | 49859 bytes  |  3.14976232977

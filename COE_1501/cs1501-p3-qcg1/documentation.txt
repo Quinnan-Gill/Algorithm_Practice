@@ -1,0 +1,46 @@
+This project is implemented by using two encapsulating indirect priority queues
+(super PQ) made of indirect priority queues made of car nodes (sub PQ). Each
+super PQ is sorted using a custom comparator method. The sub PQ is made of an
+array that resizes (amortizes to O(1) operation), and a HashMap to index the
+arrays to update and delete the car nodes.
+So the worst case is adding and getting the HashMap is an O(lgN) operation.
+To access the min is an O(1) operation this is important for the.
+To insert is a O(lgN) operation to
+swim the node. The update and delete operation is O(1) (with high probability)
+but O(lgN) worst case
+to get the index with the HashMap, and O(lgN) for sink or swim after the
+delete/update. For indexing I choose a HashMap it has a runtime of O(1) with
+high probability however in the event of a collision the hashmap creates a BST.
+super PQ. Moving to the super PQ to insert requires looking up the correct sub PQ
+to insert into via a HashMap an O(lgN) operation then inserting into the sub PQ is
+an O(lgN) operation then another O(lgR) to sink/swim the sub PQ in the super PQ
+if there is a change in the min of the sub PQ (like update it) R is for the
+number of Cars. Worst case insert is O(lgN) because either there is only make
+and model or there are all unique makes and models and the superPQ acts like a
+normal PQ of size N. Updating is similar to inserting but it uses the sub PQ's
+updating method it requires looking up the VIN for specific make and model sub PQ
+then uses the sub PQ's update method. This operation is also O(lgN) by using the
+same reasoning as inserting. Deleting is just like updating (uses the sub PQ's
+delete method) it is an O(lgN) operation (same reasoning as inserting and
+updating) however if it ends up removing the last element of a sub PQ the
+process acts just like an indirect PQ and swaps the removed item with the last
+item in the array and sinks that newly swapped item. To get the minimum car is
+O(1) because it requires looking at the first car element in the first sub PQ.
+To get the minimum element by make and model requires looking up the proper
+sub PQ in the HashMap an O(lgN) operation and getting the min Car element from
+that sub PQ another O(1) operation; this entire process has a O(lgN) runtime worst
+case, but with high probability has a O(1) runtime.
+It is important to note that it is assumed hashing the VIN and make/model pair
+is a constant operation. Moving over to size, the super PQ uses 3N space with
+worst case being unique make and models for each car this requires N for the
+super PQ (each sub PQ only has one element), N for the make/model to sub PQ
+HashMap, and N for the VIN to make/model HashMap. Since there are two super PQ
+objects used the entire program requires at worst 6N space or O(N) extra space.
+I choose this method, because practically the data structure will be faster than
+O(lgN) because there are several cars per make and model, and it also saves more
+space practically as well. Others have made individual makes and model PQ's, and
+then a very large over all PQ. This requires not only two insert operations
+(with one being the worst case of O(lgN)) but it requires tons of space. My way
+conserves space removing the need for the large over all PQ while also saving
+runtime, because it is even more rare to have the worst case conditions for the
+super PQ.
